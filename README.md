@@ -33,7 +33,7 @@ W:     at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
 
 
  
-With Rxjava2Debug applied it still prints out the same obscure information. It is suppose to locate the root problem, which roots from NullRepo.java:
+With Rxjava2Debug applied it still prints out the same obscure information. It is suppose to locate the root problem, which roots from `NullRepo.java` at [here](https://github.com/TonyTangAndroid/RxJava2DebugIssueDemo/blob/master/app/src/main/java/com/github/tonytangandroid/rxjava2debugdemo/NullRepo.java#L12):
 
 ```java
 W: java.lang.NullPointerException: Callable returned null
