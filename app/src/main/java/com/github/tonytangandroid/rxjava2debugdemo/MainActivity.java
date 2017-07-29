@@ -25,17 +25,6 @@ public class MainActivity extends AppCompatActivity {
             public void accept(@NonNull String s) throws Exception {
                 tvResult.setText(s);
             }
-        }, new Consumer<Throwable>() {
-            @Override
-            public void accept(@NonNull Throwable throwable) throws Exception {
-                throwable.printStackTrace();
-                tvResult.setText(throwable.getMessage());
-            }
-        }, new Action() {
-            @Override
-            public void run() throws Exception {
-                Log.i("completed", "Completed");
-            }
         });
     }
 }
