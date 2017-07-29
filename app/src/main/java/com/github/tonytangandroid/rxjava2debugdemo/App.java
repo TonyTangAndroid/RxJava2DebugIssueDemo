@@ -11,7 +11,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
-        RxJava2Debug.enableRxJava2AssemblyTracking(new String[]{"com.github.tonytangandroid"});
+        RxJava2Debug.enableRxJava2AssemblyTracking();
         Log.i("App", "RxJava2Debug enableRxJava2AssemblyTracking ");
     }
 }
