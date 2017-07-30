@@ -9,7 +9,6 @@ import io.reactivex.Observable;
 public class DataRepo {
 
 
-
     public static Observable<String> getStringObservable() {
         return Observable.fromCallable(new Callable<String>() {
             @Override

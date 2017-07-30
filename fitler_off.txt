@@ -1,0 +1,71 @@
+I: Late-enabling -Xcheck:jni
+W: ClassLoader referenced unknown path: /data/app/com.github.tonytangandroid.rxjava2debugdemo-1/lib/arm64
+I: RxJava2Debug enableRxJava2AssemblyTracking
+W: Before Android 4.1, method android.graphics.PorterDuffColorFilter android.support.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+W: io.reactivex.exceptions.OnErrorNotImplementedException: Callable returned null
+W:     at io.reactivex.internal.functions.Functions$OnErrorMissingConsumer.accept(Functions.java:704)
+W:     at io.reactivex.internal.functions.Functions$OnErrorMissingConsumer.accept(Functions.java:701)
+W:     at io.reactivex.internal.observers.LambdaObserver.onError(LambdaObserver.java:74)
+W:     at hu.akarnokd.rxjava2.debug.ObservableOnAssembly$OnAssemblyObserver.onError(ObservableOnAssembly.java:60)
+W:     at io.reactivex.internal.operators.observable.ObservableFromCallable.subscribeActual(ObservableFromCallable.java:46)
+W:     at io.reactivex.Observable.subscribe(Observable.java:10842)
+W:     at hu.akarnokd.rxjava2.debug.ObservableOnAssemblyCallable.subscribeActual(ObservableOnAssemblyCallable.java:43)
+W:     at io.reactivex.Observable.subscribe(Observable.java:10842)
+W:     at io.reactivex.Observable.subscribe(Observable.java:10828)
+W:     at io.reactivex.Observable.subscribe(Observable.java:10731)
+W:     at com.github.tonytangandroid.rxjava2debugdemo.MainActivity.onCreate(MainActivity.java:21)
+W:     at android.app.Activity.performCreate(Activity.java:6682)
+W:     at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
+W:     at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
+W:     at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
+W:     at android.app.ActivityThread.-wrap12(ActivityThread.java)
+W:     at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
+W:     at android.os.Handler.dispatchMessage(Handler.java:102)
+W:     at android.os.Looper.loop(Looper.java:154)
+W:     at android.app.ActivityThread.main(ActivityThread.java:6121)
+W:     at java.lang.reflect.Method.invoke(Native Method)
+W:     at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
+W:     at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
+W: Caused by: java.lang.NullPointerException: Callable returned null
+W:     at io.reactivex.internal.functions.ObjectHelper.requireNonNull(ObjectHelper.java:39)
+W:     at io.reactivex.internal.operators.observable.ObservableFromCallable.subscribeActual(ObservableFromCallable.java:42)
+W: 	... 18 more
+W: Caused by: hu.akarnokd.rxjava2.debug.RxJavaAssemblyException
+E: FATAL EXCEPTION: main
+   Process: com.github.tonytangandroid.rxjava2debugdemo, PID: 24187
+   java.lang.Throwable: Callable returned null
+       at io.reactivex.internal.functions.ObjectHelper.requireNonNull(ObjectHelper.java:39)
+       at io.reactivex.internal.operators.observable.ObservableFromCallable.subscribeActual(ObservableFromCallable.java:42)
+       at io.reactivex.Observable.subscribe(Observable.java:10842)
+       at hu.akarnokd.rxjava2.debug.ObservableOnAssemblyCallable.subscribeActual(ObservableOnAssemblyCallable.java:43)
+       at io.reactivex.Observable.subscribe(Observable.java:10842)
+       at io.reactivex.Observable.subscribe(Observable.java:10828)
+       at io.reactivex.Observable.subscribe(Observable.java:10731)
+       at com.github.tonytangandroid.rxjava2debugdemo.MainActivity.onCreate(MainActivity.java:21)
+       at android.app.Activity.performCreate(Activity.java:6682)
+       at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
+       at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
+       at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
+       at android.app.ActivityThread.-wrap12(ActivityThread.java)
+       at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
+       at android.os.Handler.dispatchMessage(Handler.java:102)
+       at android.os.Looper.loop(Looper.java:154)
+       at android.app.ActivityThread.main(ActivityThread.java:6121)
+       at java.lang.reflect.Method.invoke(Native Method)
+       at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
+       at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
+    Caused by: java.lang.Throwable
+    Caused by: java.lang.Throwable
+       at io.reactivex.Observable.fromCallable(Observable.java:1643)
+       at com.github.tonytangandroid.rxjava2debugdemo.DataRepo.getStringObservable(DataRepo.java:14)
+       at com.github.tonytangandroid.rxjava2debugdemo.MainActivity.onCreate(MainActivity.java:21)
+       at android.app.Activity.performCreate(Activity.java:6682)
+       at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
+       at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2619)
+       at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2727)
+       at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1478)
+       at android.os.Handler.dispatchMessage(Handler.java:102)
+       at android.os.Looper.loop(Looper.java:154)
+       at android.app.ActivityThread.main(ActivityThread.java:6121)
+       at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:889)
+       at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:779)
